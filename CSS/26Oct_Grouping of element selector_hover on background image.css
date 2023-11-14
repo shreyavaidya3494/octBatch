@@ -1,0 +1,49 @@
+/* Grouping of element selector */
+
+table,tr,td
+{
+    border:1px solid black;
+    border-collapse:collapse;
+}
+
+th{
+    border:1px solid black;
+    border-collapse:collapse;
+    background-color: blue;
+}
+
+.table1
+{
+    color:brown;
+    background-color: aqua;
+    height:300px;
+    width:300px;
+    text-align:end;
+    margin:auto;
+}
+
+
+.table2
+{
+    color:pink;
+    background-color:darkorchid;
+    height:300px;
+    width:300px;
+    text-align:center;
+    margin:auto;  
+}
+
+
+/* Can we do hover over background image */
+.main
+{
+background-image: url("E:/octBatch2023/HTML/Ralia.jpg");
+background-repeat: no-repeat;
+width:1300px;
+height:1400px;
+}
+
+/* But entire UI gets hovered */
+.main:hover{
+    opacity:0.5
+}

@@ -1,0 +1,33 @@
+.parent
+{
+    height:700px;
+    width:700px;
+    background-color:rgba(217, 240, 9, 0.91);
+}
+
+
+.heading-section
+{
+    color:tomato;
+    text-align:center;
+    margin:right;
+}
+
+.para
+{
+    color:blue;
+    background-color: aqua;
+    font-size: 25px;
+}
+
+.hthree
+{
+    color:black;
+    background-color:whitesmoke;
+    font-size: 50px;
+}
+
+div.parent div h3.hthree
+{
+    background-color:rgb(238, 9, 135);
+}

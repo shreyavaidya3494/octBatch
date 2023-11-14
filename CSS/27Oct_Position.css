@@ -1,0 +1,225 @@
+/* How to display height, width in span tag?
+In general, span tag is inline in nature, so height, width can't be applied but it can be done by using display:block */
+
+.span-test1
+{
+   background-color: aquamarine; 
+   border: 2px solid orange;
+   height:300px;
+   width:200px;
+}
+
+.span-test2
+{
+    background-color: aquamarine; 
+    border: 2px solid orange;
+    height:300px;
+    width:200px;  
+    display:block;
+}
+
+
+/* Position-The position property specifies the type of positioning method used for an element (static, relative, absolute, fixed, or sticky). */
+
+
+/* static	: Default value. Elements render in order, as they appear in the document flow	
+absolute: The element is positioned relative to its first positioned (not static) ancestor element	
+fixed	: The element is positioned relative to the browser window	
+relative:	The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position	
+sticky:	The element is positioned based on the user's scroll position
+A sticky element toggles between relative and fixed, depending on the scroll position. 
+It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+Note: Not supported in IE/Edge 15 or earlier. Supported in Safari from version 6.1 with a -webkit- prefix.	
+initial	Sets this property to its default value. 	
+inherit	Inherits this property from its parent element.  */
+
+/* Static Position */
+
+.static-test1
+{
+    background-color: brown;
+    border: 2px solid greenyellow;
+    height:200px;
+    width:300px;
+    position:static;
+    top:0px;
+    left:0px
+}
+
+.static-test2
+{
+    background-color: brown;
+    border: 2px solid greenyellow;
+    height:200px;
+    width:300px;
+    position:static;
+    top:70px;
+    left:70px
+}
+
+.static-test3
+{
+    background-color: brown;
+    border: 2px solid greenyellow;
+    height:50px;
+    width:50px;
+    position:static;
+}
+
+
+/* Fixed position */
+
+.fixed1
+{
+    background-color: rgb(91, 6, 239);
+    border: 2px solid rgb(208, 139, 145);
+    height:100px;
+    width:100px;
+    position:fixed;
+    top:200px;
+    left:100px;
+}
+
+.fixed2
+{
+    background-color: rgb(91, 6, 239);
+    border: 2px solid rgb(208, 139, 145);
+    height:100px;
+    width:100px;
+    position:fixed;
+    top:0px;
+    right:100px;
+}
+
+.fixed3
+{
+    background-color: rgb(91, 6, 239);
+    border: 2px solid rgb(208, 139, 145);
+    height:500px;
+    width:500px;
+    position:fixed;
+
+}
+
+/* Absolute position */
+.absolute1
+{
+    background-color: yellow;
+    border: 2px solid black;
+    height:100px;
+    width:100px;
+    position:absolute;
+    top:200px;
+    left:100px;
+}
+
+.absolute2
+{
+    background-color: yellow;
+    border: 2px solid Black;
+    height:100px;
+    width:100px;
+    position:absolute;
+    top:0px;
+    right:100px;
+}
+
+.absolute3
+{
+    background-color: yellow;
+    border: 2px solid black;
+    height:50px;
+    width:50px;
+    position:absolute;
+    
+}
+
+
+/* Relative Position */
+
+.relative1
+{
+    background-color: black;
+    border: 2px solid black;
+    color:white;
+    height:100px;
+    width:100px;
+    position:relative;
+    top:200px;
+    left:100px;
+}
+
+.relative2
+{
+    background-color: black;
+    border: 2px solid Black;
+    color:white;
+    height:100px;
+    width:100px;
+    position:relative;
+    top:0px;
+    right:25px;
+}
+
+.relative3
+{
+    background-color: black;
+    border: 2px solid black;
+    color:white;
+    height:50px;
+    width:50px;
+    position:relative;
+    
+}
+
+
+/* Creating login form with footer at bottom */
+
+.login-form
+{
+    background-color: rgba(7, 7, 78, 0.333);
+    color:pink;
+    text-align:center;
+    border: 5px solid orange;
+    height:500px;
+    width:500px;
+    position:absolute;
+    top:300px;
+    left:500px;
+}
+
+.submit
+{
+    background-color: blue;
+    color:white;
+    text-align:center;
+    height:20px;
+    width:300px;
+    position:absolute;
+    top:750px;
+    left:600px;
+}
+
+.footer
+{
+  background-color: aqua;  
+  color:black;
+  height:50px;
+  width:1500px;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  text-align: center;
+}
+
+.sticky
+{
+    background-color: green;
+    color:bisque;
+    height:50px;
+    position:sticky;
+    top:0px;
+    left:300px;
+    text-align: center;
+}

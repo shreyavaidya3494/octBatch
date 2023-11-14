@@ -1,0 +1,91 @@
+/* If I am applying element selector also and class selector also to a tag, then what it will pick */
+/* Containers or class selectors will pick those properties of element selectors, which they don't have.
+This scenario should not be used in real time */
+
+
+/* element selector */
+h1
+{
+color:orange;
+font-size: 15px;
+}
+
+/* class selector */
+.h1-container
+{
+  color:blue; 
+  background-color: brown; 
+}
+
+/* element selector */
+p{
+    color:black;
+    background-color: rgb(108, 13, 250);
+}
+
+/* class selector */
+.ptag
+{
+    color:aqua;
+    font-size: 200px;
+}
+
+/* id selector */
+
+#div-container
+{
+    border: 3px dashed green;
+    width:200px;
+    background-color: antiquewhite;
+    color:rgb(244, 56, 87);
+}
+
+/* Ideally 2 different tags should not have same id in real time, but let us see how it goes here */
+
+#pid
+{
+    color:yellow;
+    background-color:black;
+}
+
+/* Universal selector- Selects all elements and attach all the covered CSS to all elements in html */
+
+*
+{
+    background-color:rgb(180, 237, 6);
+    color:brown ;
+}
+ 
+/*Opacity- Opacity ranges from 0 to 1. 1 means clearest. 0 means blurrest*/
+img
+{
+opacity:0.5;
+}
+
+/* psudeo classes tell about hover. When u hover mouse then opacity will be 1 else 0.5 as defined earlier */
+
+img:hover
+{
+    opacity:1;
+}
+
+ /* How to create vertical line in CSS */
+ /* Creating black line between virat and anushka */
+
+ .vertical-line
+ {
+    border-left: 4px solid black;
+    height:400px;
+    position: absolute;
+    left:210px;
+    top:1100px;
+ }
+
+ ul li
+ {
+    display:inline;
+ }
+ ul li:before
+{
+    content:"\2022"
+}

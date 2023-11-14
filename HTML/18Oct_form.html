@@ -1,0 +1,68 @@
+<form>
+    <!-- type text accepts all data types -->
+<h1> Form for Astrology </h1>
+<br>
+<br>
+<label> Name : </label>
+<input type="text">
+<br>
+<label > Mobile number : </label>
+<input type="number">
+<br>
+<label> Date of birth : </label>
+<input type="datetime-local">
+<br>
+<label> Email id : </label>   
+<input type="email">
+<br>
+<label > Gender : </label>
+<input type="radio" name="gender" id="Male"> Male
+<input type="radio" name="gender" id="Female"> Female
+<input type="radio" name="gender" is="Transgender"> Transgender
+<br>
+<label > Hobbies : </label>
+<input type="checkbox"> Drawing
+<input type="checkbox"> Painting
+<input type="checkbox"> Dancing
+<input type="checkbox"> Singing
+<input type="checkbox"> Treking
+<br>
+<h1>Trials</h1>
+<h2>Let us give some digit limitation to number type</h2>
+<label> Mobile number</label>
+<input type="number" maxlength="5"> 
+<input type="number" max="5"> 
+<!-- maxlength and max do not work with number type-->
+<br>
+
+<br>
+
+<h3>Take mobile number as type text and put validation there to limit the no of digits</h3>
+<label> Number only with limitation</label>
+<input type="text" pattern="[0-9]{5}$" minlength="4" maxlength="10" required> 
+<!-- Practice the above one, Very important {5} means it will only accept 5 digits--
+    [0-9] means range, {5} means how many digits and $ means end of regex pattern
+required means mandatory field
+maxlength sets limit to UI for particular no of digits -->
+<br>
+
+<h3>Take username as type text and put validation there to limit the no of characters</h3>
+<label> Name with char limitation</label>
+<input type="text" pattern="[a-zA-Z]{7}$" minlength="3" maxlength="7" required>
+<br>
+<!-- Read only attribute -->
+<label> Company</label>
+<input type="text" readonly>
+<br>
+<!-- Placeholder attribute -->
+<label> Comments</label>
+<input type="text" placeholder="Enter your comments here">
+<br><br>
+<input type="hidden">
+<!-- input box will get hidden in UI -->
+<button>submit</button>
+</form>
+
+
+
+

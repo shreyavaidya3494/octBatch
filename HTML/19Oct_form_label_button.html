@@ -1,0 +1,53 @@
+<!-- Content or element has unique identity which is called id attribute
+name attribute is used to pass value to backend /send user or form values to database -->
+
+<form>
+    <label> Gender </label>
+    <br>
+    <input type="radio" name="gender" id="Male"> Male
+    <input type="radio" name="gender" id="Female"> Female
+    <input type="radio" name="gender" id="Transgender"> Transgender
+    <br>
+    <label>School name </label>
+    <!-- Value attribute gives a prefilled value to input tag -->
+    <input type="text" value="DAV Public School">
+
+    <br>
+    <!-- To pass non-editable value -->
+    <label > College</label>
+    <input type="text" value="Laxminarayan Institute of Technology" readonly> 
+<br>
+<!-- autocomplete attribute- used to enable or disable the autocomplete feature of  input -->
+<label> Designation</label>
+<input type="text" autocomplete="off">
+<br>
+<label > Roll number </label>
+<input type="hidden">
+<br>
+
+<!-- dropdown- select tag is used for this -->
+
+<label> city </label>
+<select>
+    <option value="Mumbai">Mumbai</option> 
+    <option value="Hyderabad"> Hyderabad</option> 
+    <option value="Pune">Pune</option>
+    <option value="Delhi">Delhi</option>
+</select>
+<select>
+    <option value="Mumbai">Mumbai</option> 
+    <option value="Hyderabad" selected> Hyderabad</option> 
+    <option value="Pune">Pune</option>
+    <option value="Delhi">Delhi</option>
+</select>
+<select>
+    <option value="" hidden></option>
+    <option value="Mumbai">Mumbai</option> 
+    <option value="Hyderabad"> Hyderabad</option> 
+    <option value="Pune">Pune</option>
+    <option value="Delhi">Delhi</option>
+</select>
+<br>
+<br>
+    <button>submit</button>
+</form>

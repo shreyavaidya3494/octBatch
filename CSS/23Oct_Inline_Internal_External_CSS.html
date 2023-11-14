@@ -1,0 +1,35 @@
+<!-- 1) Inline css -->
+<div style="border-bottom: blue; background-color: blanchedalmond; font-size: large; color: brown;"> This is inline css</div>
+
+<!-- Disadvantages: When u have to put 30 attributes, it becomes impossible. -->
+
+<br>
+
+<!-- 2) Internal CSS or element selector -->
+
+<style>
+div
+{
+background-color: brown; color:blue;
+}
+</style>
+
+<div> This is internal css</div>
+
+<!-- Disadvantages: Same color properties will be attached to all same tags -->
+
+<!-- 3) External CSS - It has class selector and element selector. But, we will only use class selector -->
+
+<!-- link tag is to attach css file -->
+<link rel="stylesheet" href="23Oct.css">
+<!-- link tag is a standalone tag, no closing tag -->
+<pre> I like Mango </pre>
+<pre> I like apple</pre>
+
+<!-- To all pre tags, same attributes will be applied by default -->
+
+<br>
+<br>
+
+<h3 class="h3-container"> This statement is class selector period tag in h3 tag</h3>
+<p class="para-container"> This statement is class sector period tag in p tag</p>

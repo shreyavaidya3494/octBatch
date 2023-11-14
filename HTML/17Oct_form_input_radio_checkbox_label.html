@@ -1,0 +1,36 @@
+
+<form>
+<label> Username</label>
+<input type="text" maxlength="15">
+<br>
+<label> Mobile no </label>
+<input type="number">
+<br>
+<label> Email id</label>
+<input type="email">
+<br>
+<label> Gender </label>
+<!-- Radio button-Single selection only -->
+<input type="radio" id="male"> Male
+<input type="radio" id="female"> Female
+<input type="radio" id="transgender"> Transgender
+<br>
+<label> Gender2 </label>
+<!-- If same name is given, then only it will behave as single selection -->
+<!-- id is unique identity of a particular field.value should be unique -->
+<input type="radio" name="gender" id="male"> Male
+<input type="radio" name="gender" id="female"> Female
+<input type="radio" name="gender" id="transgender"> Transgender
+<br>
+<!-- For multiple selection- checkbox -->
+<label>Hobbies</label>
+<input type="checkbox">Dancing
+<input type="checkbox">Singing
+<input type="checkbox">Cricket
+<input type="checkbox">Skating
+<input type="checkbox">Travelling
+<input type="checkbox">Drawing
+<br>
+<br>
+<input type="button" value="submit">
+</form>
