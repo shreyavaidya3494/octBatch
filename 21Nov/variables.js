@@ -30,3 +30,7 @@ console.log(name);
  let name1="shreya1";
  console.log(name1);
  //output:shreya1
+
+ let surname="vaidya"; //declaration+definition
+ console.log(surname);
+ //output:vaidya
