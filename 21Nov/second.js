@@ -1,4 +1,4 @@
-console.log('second')
-console.log('Ranbir')
-console.log('Ranveer')
-console.log('Virat')
+console.log('blue');
+console.log('red');
+console.log('green');
+console.log('yellow');
