@@ -13,3 +13,15 @@
 // Data type means the type of data-String, boolean , int, float
 
 // To run this, we go to terminal and write node file name enter
+
+// Variables are Containers for Storing Data
+// JavaScript Variables can be declared in 4 ways:
+
+// Automatically
+// Using var
+// Using let
+// Using const
+
+// console.log is used when you want to see the value of variable in terminal
+
+// Undefined's data type is undefined and null's data type is object. Both point towards empty
