@@ -1,0 +1,45 @@
+<!-- If I am applying element selector also and class selector also to a tag, then what it will pick  -->
+<!-- containers or class selectors will pick those properties of element selectors, which they don't have -->
+
+<link rel="stylesheet" href="24Oct.css">
+
+<!-- Example1: -->
+<h1> I am writing line 1</h1>
+<h1 class="h1-container"> I am writing line 2</h1>
+
+<!-- Example2: -->
+<p > I am writing line3</p>
+<p class="ptag"> I am writing line4</p>
+
+<!-- id selector -->
+<div id="div-container"> I am using line1 in id selector</div>
+
+<!-- Ideally 2 different tags should not have same id in real time, but let us see how it goes here . Unique id should be there for every element -->
+
+<p id="pid"> p tag with id selector</p>
+<pre id="pid"> pre tag with id selector</pre>
+
+<!-- Universal selector- The properties in universal selector are applied to all the other elements on the page.
+Example- If I apply background colour as white in universal selector, then it will give white background color to all rows 
+in which background color is not defined -->
+
+<pre>Hi! Universal tag</pre>
+
+<div> Hi...utag</div>
+
+
+<!-- Opacity -->
+
+<img src="C:\Users\HP\Downloads\virushka.jpg" width="400" height="400">
+
+<!-- Vertical line on left -->
+<div class="vertical-line"> </div>
+
+<!-- How to display elements of list horizontally -->
+<ul>
+    <li> Katrina</li>
+    <li> Kareena</li>
+    <li>Alia</li>
+    <li>Deepika</li>
+    <li>Anushka</li>
+</ul>

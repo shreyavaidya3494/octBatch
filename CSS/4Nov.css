@@ -1,0 +1,123 @@
+.parent-container{ 
+    min-height: 100%; 
+    background-color: rgb(246, 227, 202); 
+    position: relative; 
+    background-image: url("C:/Users/HP/Downloads/katya-ross-Ni-xXcVb8Cg-unsplash.jpg") ;
+    /* background-size: 800px 800px; */
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    /* overflow-y: scroll; 
+    overflow-x: hidden; */ 
+   
+  } 
+  .dropdown { 
+    background-color: #f3b8b8; 
+    overflow: hidden; 
+  }  
+   
+  .dropdown a{ 
+    text-decoration: none; 
+    float: left; 
+    padding: 4px 4px; 
+    font-size: 15px; 
+  } 
+  .dropdown-container{ 
+    overflow: hidden; 
+    float: left; 
+  } 
+  .dropbtn { 
+    background-color: green; 
+    padding: 4px 4px; 
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+    position: absolute; 
+    top: 2px; 
+    font-size: 11px; 
+  } 
+  .dropdown-content{ 
+    position: absolute; 
+    min-width: 100px; 
+    background-color: aquamarine; 
+    display: none; 
+    z-index: 1; 
+    text-align: center; 
+    top: 22px; 
+  } 
+   
+  .dropdown-content a{ 
+    text-decoration: none; 
+    display: block; 
+    padding: 5px 5px; 
+    float: none; 
+  } 
+   
+  .dropdown-container:hover .dropdown-content{ 
+    display: block; 
+    z-index: 1; 
+  } 
+  .dropbtn:hover{ 
+    /* background-color: #71ef80; */ 
+    opacity: 0.5; 
+  } 
+  .dropdown-content a:hover{ 
+   background-color: orange !important; 
+  } 
+  .dropdown a:hover{ 
+    background-color: cornflowerblue; 
+  } 
+  .link-3-container{ 
+    overflow: hidden; 
+    /* float: left; */ 
+  } 
+  .dropdown-link3-content{ 
+    position: absolute; 
+    min-width: 100px; 
+    background-color: aquamarine; 
+    display: none; 
+    top: 54px; 
+    left: 100px; 
+    text-align: center; 
+  } 
+   
+  .link-3-container:hover .dropdown-link3-content{ 
+    display: block; 
+  } 
+   
+  .footer{ 
+    text-align: center; 
+    position: fixed; 
+    border: 1px solid black; 
+    bottom: 0px; 
+    width: 990px; 
+    background-color: #f3b8b8; 
+  } 
+  .form-container{ 
+    border: 1px solid paleturquoise; 
+      background-color: #f6d0e9; 
+      width: 221px; 
+      text-align: center; 
+      margin: auto; 
+      position: relative; 
+      top: 30px; 
+  } 
+   
+  .sbt-btn{ 
+    position: relative; 
+    top: 7px; 
+    background-color: orangered; 
+    border-radius: 20px; 
+    padding: 4px 12px; 
+    font-size: 15px; 
+    border: none; 
+  } 
+   
+  .input-box{ 
+    background-color: coral; 
+  } 
+  .txt-container{ 
+    color: white; 
+    position:absolute;
+    bottom:20px;
+  }
+ 

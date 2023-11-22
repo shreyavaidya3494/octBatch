@@ -1,0 +1,208 @@
+<!-- CSS Selectors
+A CSS selector selects the HTML element(s) you want to style.
+
+CSS Selectors
+CSS selectors are used to "find" (or select) the HTML elements you want to style.
+
+We can divide CSS selectors into five categories:
+
+Simple selectors (select elements based on name, id, class)
+Combinator selectors (select elements based on a specific relationship between them)
+Pseudo-class selectors (select elements based on a certain state)
+Pseudo-elements selectors (select and style a part of an element)
+Attribute selectors (select elements based on an attribute or attribute value) -->
+
+
+<!-- CSS Combinators
+A combinator is something that explains the relationship between the selectors.
+
+A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+
+There are four different combinators in CSS:
+
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~) -->
+
+
+<!-- Descendant Selector
+The descendant selector matches all elements that are descendants of a specified element.
+
+The following example selects all <p> elements inside <div> elements:  -->
+
+<link rel="stylesheet" href="1Nov_CSS selectors.css">
+
+<h2>Descendant Selector</h2>
+
+<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+
+<br>
+<br>
+
+
+<!-- Child Selector (>)
+The child selector selects all elements that are the children of a specified element.
+
+The following example selects all <p> elements that are children of a <div> element: -->
+
+    <h2>Child Selector</h2>
+
+    <p>The child selector (>) selects all elements that are the children of a specified element.</p>
+    
+    <pre>
+      <p>Paragraph 1 in the div.</p>
+      <p>Paragraph 2 in the div.</p>
+      <section>
+        <!-- not Child but Descendant -->
+        <p>Paragraph 3 in the div (inside a section element).</p>
+      </section>
+      <p>Paragraph 4 in the div.</p>
+    </pre>
+    
+    <p>Paragraph 5. Not in a div.</p>
+    <p>Paragraph 6. Not in a div.</p>
+
+    <br>
+    <br>
+
+ <!-- Adjacent Sibling Selector (+)
+The adjacent sibling selector is used to select an element that is directly after another specific element.
+    
+Sibling elements must have the same parent element, and "adjacent" means "immediately following". -->
+
+<h2>Adjacent Sibling Selector</h2>
+
+<p>The + selector is used to select an element that is directly after another specific element.</p>
+<p>The following example selects the first p element that are placed immediately after div elements:</p>
+
+<span>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+</span>
+
+<p>Paragraph 3. After a div.</p>
+<p>Paragraph 4. After a div.</p>
+
+<span>
+  <p>Paragraph 5 in the div.</p>
+  <p>Paragraph 6 in the div.</p>
+</span>
+
+<p>Paragraph 7. After a div.</p>
+<p>Paragraph 8. After a div.</p>
+
+
+<!-- General Sibling Selector (~)
+The general sibling selector selects all elements that are next siblings of a specified element. -->
+
+<h2>General Sibling Selector</h2>
+
+<p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
+
+<p>Paragraph 1.</p>
+
+<h3>
+  <p>Paragraph 2.</p>
+  <p>Paragraph 3</p>
+</h3>
+
+<p>Paragraph 4.</p>
+<p>Paragraph 5</p>
+<code>Some code.</code>
+<p>Paragraph 6</p>
+<p>Paragraph 7</p>
+
+
+<!-- CSS Pseudo-classes
+
+
+What are Pseudo-classes?
+A pseudo-class is used to define a special state of an element.
+
+For example, it can be used to:
+
+Style an element when a user mouses over it
+Style visited and unvisited links differently
+Style an element when it gets focus -->
+
+<!-- Syntax
+The syntax of pseudo-classes:
+
+selector:pseudo-class {
+  property: value;
+} -->
+
+<h1>Pseudo-class</h1>
+<br><br>
+<a href="https://www.instagram.com/kareenakapoorkhan/?hl=en">Click here</a>
+
+<br>
+<br>
+<br>
+
+<label>Name</label>
+<input type="text">
+
+<br>
+<br>
+
+<label>City</label>
+<input class=inpt type="text">
+
+<!-- CSS Pseudo-elements
+What are Pseudo-Elements?
+A CSS pseudo-element is used to style specified parts of an element.
+
+For example, it can be used to:
+
+Style the first letter, or line, of an element
+Insert content before, or after, the content of an element
+Syntax
+The syntax of pseudo-elements:
+
+selector::pseudo-element {
+  property: value;
+} -->
+
+<h1>CSS Pseudo element</h1>
+
+<div class="ele1">An apple a day keeps a doctor away</div>
+
+<pre class="line1"> You know I feel so good.
+    I can leave a count on you
+    I feel so poor
+    I can live without you
+</pre>
+
+<br>
+<br>
+
+<pre class="mid">
+My name is <p class="mid-change">Shreya</p> Tambe Vaidya
+</pre>
+
+<br>
+
+<label class="imp">Address</label>
+<input type="text">
+
+<br>
+<br>
+
+<label class="imp1">Age</label>
+<input type="text">
+
+<br>
+<br>
+
+<span class="baby">My baby is 2 years old</span>

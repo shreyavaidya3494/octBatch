@@ -1,0 +1,175 @@
+/* The z-index property specifies the stack order of an element.
+
+An element with greater stack order is always in front of an element with a lower stack order.
+
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements).
+
+Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top. */
+
+/* CSS text =color, alignment, decoration, transformation, spacing, shadow*-Refer w3 school*/
+
+
+.sticky
+{
+    background-color: green;
+    color:bisque;
+    height:40px;
+    position:sticky;
+    top:60px;
+    left:300px;
+    text-align: center;
+    
+}
+
+.website
+{
+    background-color: aqua;
+    color:black;
+    height:30px;
+    width:200px;
+    border:2px solid black;
+    top:0px;
+    position:absolute;
+    text-align:center;
+    z-index:2;
+    ;
+
+}
+
+.side-bar
+{
+    background-color:grey;
+    color:black;
+    height:1500px;
+    width:150px;
+    border:2px solid black;
+    position:absolute;
+    top:100px;
+    left:0px;
+}
+
+.login-form
+{
+    background-color:pink;
+   height:600px;
+    width:400px;
+    border: 2px solid blue;
+    position:absolute;
+    top:100px;
+    left:200px;
+    z-index:15;
+    text-align:center;
+    color:blue;
+    font-size: 35px;
+    text-shadow: 9px 10px 8px rgb(248, 10, 208);
+    font-size: 40px;
+    text-decoration: overline underline;
+    text-transform:uppercase;
+}
+
+/* text-shadow-horizontal vertical blur color */
+
+/* CSS overflow -The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+
+The overflow property has the following values:
+
+visible - Default. The overflow is not clipped. The content renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content will be invisible
+scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+auto - Similar to scroll, but it adds scrollbars only when necessary.
+
+Note: The overflow property only works for block elements with a specified height */
+
+.overflow-visible
+{
+    background-color: yellow;
+    border:2px solid black;
+    color:red;
+    height:100px;
+    width:200px;
+    position:absolute;
+    top:100px;
+    left:700px;
+    overflow: visible;
+}
+
+.overflow-hidden
+{
+    background-color: yellow;
+    border:2px solid black;
+    color:red;
+    height:100px;
+    width:200px;
+    position:absolute;
+    top:300px;
+    left:700px;
+    overflow: hidden;
+}
+
+.overflow-scroll
+{
+    background-color: yellow;
+    border:2px solid black;
+    color:red;
+    height:100px;
+    width:200px;
+    position:absolute;
+    top:500px;
+    left:700px;
+    overflow: scroll;
+    scrollbar-color: blue;
+    
+}
+
+.overflow-auto
+{
+    background-color: yellow;
+    border:2px solid black;
+    color:red;
+    height:100px;
+    width:200px;
+    position:absolute;
+    top:700px;
+    left:700px;
+    overflow: auto;
+}
+
+/* Text-overflow:
+The text-overflow property specifies how overflowed content that is not displayed should be signaled to the user. It can be clipped, display an ellipsis (...), or display a custom string.
+
+Both of the following properties are required for text-overflow:
+
+white-space: nowrap;
+overflow: hidden; */
+
+.text-overflow-clip
+{
+    background-color: black;
+    border:2px solid white;
+    color:orange;
+    height:150px;
+    width:150px;
+    position:absolute;
+    top:100px;
+    right:100px;
+    overflow:hidden;  
+    text-overflow:clip;
+    white-space: nowrap;
+}
+
+.text-overflow-ellipsis
+{
+    background-color: black;
+    border:2px solid white;
+    color:orange;
+    height:150px;
+    width:150px;
+    position:absolute;
+    top:400px;
+    right:100px;
+    overflow:hidden;  
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+

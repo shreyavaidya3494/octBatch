@@ -1,0 +1,176 @@
+a
+{
+    text-decoration: none;
+    padding:15px 15px;
+}
+
+.C1
+{
+    background-color: bisque;
+    padding:10px 10px;
+    height:30px;
+   
+}
+
+.btn .C2
+{
+    background-color: aqua;
+    height:40px;
+    
+}
+
+.C3
+{
+    position:absolute;
+    left:193px;
+    top:60px;
+    background-color: aquamarine;
+    box-shadow: 0px 8px 16px 0px black;
+    border:1px solid black;
+    z-index:1;
+    
+}
+
+.btn
+{
+    display:inline;
+    padding:5px 5px;
+  
+}
+
+.C3 a
+{
+    
+    color:black;
+    display:none;
+    
+}
+
+
+.btn:hover .C3 a
+{
+    display:block;
+    
+}
+
+
+.C3 a:hover
+{
+    background-color: brown;
+}
+
+a:hover
+{
+background-color: orange;
+}
+
+button.C2:hover
+{
+    background-color: yellowgreen;
+}
+
+
+
+
+.C4
+{
+    position:absolute;
+    left:62px;
+    top:0px;
+    background-color: pink;
+    box-shadow: 0px 8px 16px 0px black;
+    
+}
+
+.C5
+{
+    position:absolute;
+    left:62px;
+    top:50px;
+    background-color: pink;
+    box-shadow: 0px 8px 16px 0px black; 
+ 
+    
+}
+
+.C6
+{
+    position:absolute;
+    left:62px;
+    top:100px;
+    background-color: pink;
+    box-shadow: 0px 8px 16px 0px black; 
+    
+   
+} 
+
+.C3 .C4 {
+    display: none;
+}
+
+.C3 a:hover + .C4 
+{
+    display: block;
+    
+}
+
+
+
+
+
+.C3 .C5 {
+    display: none;
+}
+
+.C3 a:hover + .C5 {
+    display: block;
+}
+
+.C3 .C6 {
+    display: none;
+}
+
+.C3 a:hover + .C6 {
+    display: block;
+}
+
+
+.Form-class
+{
+    border:2px solid black;
+    position:relative;
+    top:209px;
+    left:20px;
+    width:300px;
+    text-align: center;
+    background-color: pink;
+}
+
+.Footer
+{
+    position:fixed;
+    bottom:0px;
+    height:20px;
+    width:1000px;
+    background-color: aquamarine;
+    border:1px solid black;
+    text-align: center;
+}
+
+
+.Parent
+{
+    
+    height:1000px;
+    width:1000px;
+    background-size: cover;
+    z-index: -1;
+    position: relative; 
+    
+    background-size: cover; 
+}
+
+
+
+
+ 

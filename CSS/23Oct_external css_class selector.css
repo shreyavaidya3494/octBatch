@@ -1,0 +1,34 @@
+/* External CSS- Element selector */
+pre
+{
+color:rgb(255, 0, 30);
+font-size: larger;
+}
+
+/* Class selector: 
+className: .(PeriodOperator) ClassName(space,-,special character, first character of class name as integer not allowed) */
+
+/* Example:
+heading3-container
+{
+    property:value;
+} 
+*/
+
+.h3-container
+{
+    color:blueviolet;
+    font-size: 25px;
+}
+
+
+.para-container
+{
+    color:antiquewhite;
+    font-size: 25px;
+    background-color: rgb(245, 140, 140);
+    border: 5px dashed rebeccapurple;
+    width:2000px;
+    text-align: left;
+    margin:auto;
+}

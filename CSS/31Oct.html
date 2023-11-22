@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="31Oct.css">
+
+<!-- Word-break:The word-break property specifies how words should break when reaching the end of a line. -->
+
+<!-- Value	Description	Demo
+normal	Default value. Uses default line break rules	
+break-all:	To prevent overflow, word may be broken at any character	
+keep-all :	Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as value "normal"	
+break-word:	To prevent overflow, word may be broken at arbitrary points	
+initial	:Sets this property to its default value. 	
+inherit	:Inherits this property from its parent element.  -->
+
+<div class="word1">1st with no word break applied. I am very enthiusiastic and communicative, extraverted and aggressive.</div>
+
+<div class="word2">2nd with normal. I am very enthiusiastic and communicative, extraverted and aggressive.</div>
+
+<div class="word3">3rd with break all. I am very enthiusiastic and communicative, extraverted and aggressive.</div>
+
+<div class="word4">4th with break word. I am very enthiusiastic and communicative, extraverted and aggressive.</div>
+
+<!-- Word-wrap: Allow long words to be able to break and wrap onto the next line. -->
+
+<div class="word-wrap">5th with break word word wrap. I am very enthiusiastic and communicative, extraverted and aggressive.</div>
+
+
+<!-- Word spacing:The word-spacing property increases or decreases the white space between words.
+
+Note: Negative values are allowed.
+
+Value	Description	Demo
+normal:	Defines normal space between words (0.25em) . This is default	
+length	: Defines an additional space between words (in px, pt, cm, em, etc). Negative values are allowed. Read about length units	
+initial	: Sets this property to its default value. Read about initial	
+inherit	" Inherits this property from its parent element. Read about inherit -->
+
+<div class="length50px"> Let us check word spacing</div>
+
+<!-- Writing mode property:The writing-mode property specifies whether lines of text are laid out horizontally or vertically. -->
+
+<!-- Value	Description	Demo
+horizontal-tb	Let the content flow horizontally from left to right, vertically from top to bottom	
+vertical-rl	Let the content flow vertically from top to bottom, horizontally from right to left	
+vertical-lr	Let the content flow vertically from top to bottom, horizontally from left to right -->
+
+<div class="write-mode"> I have applied vertical mode in write</div>
+
+
+<!-- CSS Combinators-A combinator is something that explains the relationship between the selectors. 
+A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+
+There are four different combinators in CSS:
+
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~)-->
+
+<!-- The descendant selector matches all elements that are descendants of a specified element.
+
+The following example selects all <p> elements inside <div> elements:  -->

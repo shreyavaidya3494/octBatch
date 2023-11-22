@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="28Oct.css">
+
+<!-- The z-index property specifies the stack order of an element.
+
+An element with greater stack order is always in front of an element with a lower stack order.
+
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements).
+
+Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top. -->
+
+<!-- CSS text =color, alignment, decoration, transformation, spacing, shadow -->
+
+<!-- Sticky position -->
+
+<p class="sticky">
+    Facebook login page
+ </p>
+
+ <p class="website"> www.facebook.com</p>
+
+ <pre class="side-bar">
+Friend requests
+Friends
+ </pre>
+
+ <br>
+
+ <p class="login-form">Login form</p>
+
+ <!-- CSS overflow -The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+
+The overflow property has the following values:
+
+visible - Default. The overflow is not clipped. The content renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content will be invisible
+scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+auto - Similar to scroll, but it adds scrollbars only when necessary.
+overflow-y- Introduces only vertical scroll bar, overflow-x: hidden-It will hide horizontal scroll bar
+
+Note: The overflow property only works for block elements with a specified height.-->
+
+<div class="overflow-visible"> By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:
+
+    You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+    </div>
+
+
+<div class="overflow-hidden">With the hidden value, the overflow is clipped, and the rest of the content is hidden.
+    You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+    </div>
+
+<div class="overflow-scroll"> Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):
+    You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.  
+</div>
+
+<div class="overflow-auto">The auto value is similar to scroll, but it adds scrollbars only when necessary.
+    You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.  
+</div>
+
+<!-- Text-overflow:
+The text-overflow property specifies how overflowed content that is not displayed should be signaled to the user. It can be clipped, display an ellipsis (...), or display a custom string.
+
+Both of the following properties are required for text-overflow:
+
+white-space: nowrap;
+overflow: hidden -->
+
+
+<div class="text-overflow-clip">The text-overflow property specifies how overflowed content that is not displayed should be signaled to the user. It can be clipped, display an ellipsis (...), or display a custom string.
+
+    Both of the following properties are required for text-overflow:
+    
+    white-space: nowrap;
+    overflow: hidden;</div>
+
+ <div class="text-overflow-ellipsis">The text-overflow property specifies how overflowed content that is not displayed should be signaled to the user. It can be clipped, display an ellipsis (...), or display a custom string.
+
+        Both of the following properties are required for text-overflow:
+        
+        white-space: nowrap;
+        overflow: hidden;</div>
+
+        
