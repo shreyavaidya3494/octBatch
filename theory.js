@@ -39,3 +39,5 @@
 // -Object
 
 // typeof is an operator which is used to get data type of a variable
+
+//Variable can be updated but cannot be re-declared
