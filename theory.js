@@ -17,7 +17,7 @@
 // Variables are Containers for Storing Data
 // JavaScript Variables can be declared in 4 ways:
 
-// Automatically
+// Automatically-one value in one variable
 // Using var
 // Using let
 // Using const
@@ -25,3 +25,17 @@
 // console.log is used when you want to see the value of variable in terminal
 
 // Undefined's data type is undefined and null's data type is object. Both point towards empty
+
+// Datatypes in Javascript- Primitive and non-Primitive
+// 1) Primitive-Means single value holder
+// -Number->Takes whole number or decimal number
+// -String-> Take alphabets or alphanumeric values. Always in double or single quotes
+// -Boolean
+// -null
+// -undefined
+// -Symbol
+
+// 2)Non-Primitive-means multi value holder- Object holds single key value pair or many key value pairs
+// -Object
+
+// typeof is an operator which is used to get data type of a variable
