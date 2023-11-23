@@ -41,3 +41,23 @@
 // typeof is an operator which is used to get data type of a variable
 
 //Variable can be updated but cannot be re-declared
+
+//We cannot use reserved keyword as variable, labels or function name
+
+// Reserved keywords in Javascript- Around 49 in number:-
+// abstract	arguments	await*	boolean
+// break	byte	case	catch
+// char	class*	const	continue
+// debugger	default	delete	do
+// double	else	enum*	eval
+// export*	extends*	false	final
+// finally	float	for	function
+// goto	if	implements	import*
+// in	instanceof	int	interface
+// let*	long	native	new
+// null	package	private	protected
+// public	return	short	static
+// super*	switch	synchronized	this
+// throw	throws	transient	true
+// try	typeof	var	void
+// volatile	while	with	yield
