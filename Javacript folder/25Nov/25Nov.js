@@ -58,8 +58,8 @@ function Anushka()
 document.write("<br>", "Display index no 5 of ar :" , ar[5]);
 console.log("Display index no 5 of ar :" , ar[5]);
 
-document.write("<br>", "Display index no 7 of ar :" , ar[7]); //negative testing
+document.write("<br>", "Display index no 7 of ar :" , ar[7]); //negative test case
 console.log("Display index no 7 of ar :" , ar[7]);
 
-document.write("<br>", "Display index no -1 of ar :" , ar[-1]);
+document.write("<br>", "Display index no -1 of ar :" , ar[-1]); //negative test case
 console.log("Display index no -1 of ar :" , ar[-1]);
