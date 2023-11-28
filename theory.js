@@ -61,3 +61,8 @@
 // throw	throws	transient	true
 // try	typeof	var	void
 // volatile	while	with	yield
+
+
+//In JavaScript null is "nothing". It is supposed to be something that doesn't exist. 
+//Unfortunately, in JavaScript, the data type of null is an object. 
+//You can consider it a bug in JavaScript that typeof null is an object.
