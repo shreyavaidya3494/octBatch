@@ -12,6 +12,9 @@ console.log("lengthhh of arra: ", arra.length);
 //length starts from 1
 
 //Object:{key:value}
+let o={}; //empty object
+console.log("Printing empty object",o);
+console.log("Printing type of empty object",typeof(o));
 
 ob={"Shreya":34, "Priyanka":36, "Ritika":32, "Shilpa":38};
 document.write(ob, "<br>", "dtype of ob: ", typeof(ob), "<br>");
