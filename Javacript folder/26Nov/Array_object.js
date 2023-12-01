@@ -11,10 +11,10 @@ console.log("lengthhh of arra: ", arra.length);
 //Indexing starts from zero
 //length starts from 1
 
-//Object:{key:value}
+//Object:{key:value}//When you want to store data with details, you use object
 let o={}; //empty object
-console.log("Printing empty object",o);
-console.log("Printing type of empty object",typeof(o));
+console.log("Printing empty object:   ",o);
+console.log("Printing type of empty object:   ",typeof(o));
 
 ob={"Shreya":34, "Priyanka":36, "Ritika":32, "Shilpa":38};
 document.write(ob, "<br>", "dtype of ob: ", typeof(ob), "<br>");
@@ -22,7 +22,7 @@ document.write("length of  key-value pair in array ob: ", ob.length,"<br>");
 document.write("Indexing Priyanka: ", ob["Priyanka"]);
 console.log(ob);
 
-//Array of objects
+//Array of objects-If we want to store data with details and also want listing. Multiple thing's data and multiple features listing
 details=[
     {name:"Alia", YOB:1993, Husband:"Ranbir"},
     {name:"Anushka", YOB:1988, Husband:"Virat"},
@@ -33,3 +33,5 @@ console.log(details);
 console.log(typeof(details));
 console.log(details[1].Husband);
 console.log(details.length);
+
+//length can only be used for array & string
