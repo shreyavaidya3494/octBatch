@@ -312,7 +312,7 @@ console.log("compiler t does not go inside")
 let u="Vaidya";
 if(!u)
 {
-    console.log("compiler u goes inside")
+    console.log("compiler u goes inside");
 }
 else
 {
