@@ -67,7 +67,198 @@ style.css - Project background, screen backgroynd, color, header, footer. This i
 
 Angular is single page application because at the end only index.html is there on UI. Body gets over written as Components gets over written. Screen changes but application does not bet refreshed.
 
+24/12
+
+In index.html file, you'll find app-root tag in body of html. app-root is selector in app.component.ts. This is called root component. app.module.ts is root module.
+
+In angular components come together to form a module. Same as flat come together to form a floor
+
+Component-components bunch together to form a module and module-module bunch together to form a project
+
+What is component?
+Component is a single folder
+
+4 component files are connected and are known by selector app-root and they are already linked. WE don't have to link them manually
+
+Open file app.component.ts
+@Component({
+  selector: 'app-root', --this hows selector
+  templateUrl: './app.component.html',------------- this link says that it has html code
+  styleUrls: ['./app.component.css']------------------this link says that it has css code
+})
+HTML CSS typescript all are linked here. So we don't have to link anything
+
+
+
+import { Component } from '@angular/core'; //import section
+
+@Component({   //component directive or meta data--component initialize, linkeage, behavior, DOM behavior, look and feel by CSS
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {    //class name is in title case
+  title = 'myApplication';   // we should write functionality or code here in this class
+}
 
 
 
 
+Command to generate component:
+ng g c home
+g- generate
+c- component
+home- component name
+
+PS E:\oct2023\octBatch\Angular\myApplication> ng g c home
+Node.js version v19.8.1 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/releases/.
+CREATE src/app/home/home.component.html (19 bytes)
+CREATE src/app/home/home.component.spec.ts (545 bytes)
+CREATE src/app/home/home.component.ts (194 bytes)
+CREATE src/app/home/home.component.css (0 bytes)
+UPDATE src/app/app.module.ts (467 bytes)
+
+
+
+
+
+
+
+
+Open app.module.ts file> This is a global module and it gets updated here.
+**********app module is root module.
+Can we change root module-Yes. We have to change app module in all other files
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';   //accordingly got updated after creating home component
+
+@NgModule({   //eagerly loaded module with 4 keys- declarations, imports, providers, bootstrap
+  declarations: [           //gets updated when u create a component/directive/pipe
+    AppComponent,       //when project was created, this AppComponent got created by default
+    HomeComponent       //We made this component
+  ],
+  imports: [          //gets updated when u create or import modules
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],  //used to get updated in case of services but no longer used after angular 5
+  bootstrap: [AppComponent]  //Root component means app component (all present in app folder). Bootstarp means we boot, app starts from here. Default root components shows URL. We can change this
+
+  We can change root component also and root module also
+
+})
+
+
+
+open file app.component.html. Delete the default contents and write code there:
+<div> Hello! Welcome to Angular learning</div>
+<!-- This will get displayed on MyApplication -->
+
+
+
+open home in src-app=app.component.html
+some default p tag will be visible like this
+<p>home works!</p>
+
+In MyApplication, only app.component.html's code "Hello! Welcome to Angular learning" is visible but app.component.html's code "home works" is not visible. We cannot display the contents of flat in which we are not there.
+
+Solutions to make it visible:
+selector or routing
+
+1st way- selector- We do this when we have to show live components
+Open app.component.html file
+
+so both components will be live i.e app.component.html and home.component.html
+
+<div> Hello! Welcome to Angular learning</div>
+<!-- This will get displayed on MyApplication -->
+<app-home></app-home> //add this
+
+Output on MyApplication:
+Hello! Welcome to Angular learning
+home works!
+
+
+How many components can be live together?- Many like heade, footer, body etc, depends upon requirements
+
+
+What is property?
+Global variable without let/const/var.
+Scope of property is limited to components
+
+
+Open app.component.ts
+This is visible-
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'myApplication';  //let us assume that this data comes from backend. We will do string interpulation from here.
+}
+
+
+Now open app.component.html. This is visible
+<div> Hello! Welcome to Angular learning</div>
+<!-- This will get displayed on MyApplication -->
+<app-home></app-home>
+
+Make it as
+<div> Hello! Welcome to Angular learning</div>
+<!-- This will get displayed on MyApplication -->
+<p>{{title}}</p>
+<app-home></app-home>
+
+Output on myApplication is
+Hello! Welcome to Angular learning
+myApplication
+home works!
+
+
+Open app.component.ts-
+We will learn how to declare property
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'myApplication';
+  //declare property. Below syntax
+  //propertyName: data type=value;
+
+  a=20;
+  b:number=90;
+  c!:number //means c is just declared but value will be assigned later
+
+This is a typescript concept. Varibale in javascript is same as property i  typescript
+
+now I write a in app.component.html as follows:-
+<div> Hello! Welcome to Angular learning</div> 
+<!-- static data -->
+<!-- This will get displayed on MyApplication -->
+<p>{{title}}</p>
+<p>{{a}}</p>
+<!-- data came from property -->
+<app-home></app-home>
+
+
+Output on MyApplication:
+Hello! Welcome to Angular learning
+myApplication
+
+20
+
+home works!
