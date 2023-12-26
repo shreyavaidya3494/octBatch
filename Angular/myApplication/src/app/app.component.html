@@ -1,7 +1,31 @@
 <div> Hello! Welcome to Angular learning</div> 
+<br>
 <!-- static data -->
 <!-- This will get displayed on MyApplication -->
 <p>{{title}}</p>
+<br>
 <p>{{a}}</p>
+<br>
+<div>{{city}}</div>
+<br>
+{{city}}
 <!-- data came from property -->
+<br>
+<input type="text" value="Tambe">
+<br>
+<input type="text" [value]="myName">  
+<!-- property binding -->
+<br>
+<input type="text" value="{{myName}}">  //string interpolation
+<br>
+<input type="text" [disabled]="isDisable">   //input box will get enabled
+<br>
+<!-- gives blank box -->
+<input type="text" disabled="{{isDisable}}"> //input box will not get enabled in string interpolation
+<br>
+<button (click)="press()">Submit</button>
+
+<div>{{fruit}}</div> 
+<!-- initially div tag mango will not be visible in output -->
+<!-- When you click on submit in UI, then only mango will be visible on UI -->
 <app-home></app-home>

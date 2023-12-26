@@ -206,6 +206,7 @@ export class AppComponent {
   title = 'myApplication';  //let us assume that this data comes from backend. We will do string interpulation from here.
 }
 
+*****************string interpolation********************************************
 
 Now open app.component.html. This is visible
 <div> Hello! Welcome to Angular learning</div>
@@ -262,3 +263,384 @@ myApplication
 20
 
 home works!
+
+
+
+--------------------------------------------------------------25 Dec 2023----------------------------------------------------------
+
+
+**********************One way data binding or one way data communication *****************************************************
+Data is going from typescript to html, so one way
+
+*************************Data binding technique no 1------string interpolation***************************************
+
+
+Open app.component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'myApplication';
+  //declare property. Below syntax
+  //propertyName: data type=value;
+
+  a=20;
+  b:number=90;
+  c!:number //means c is just declared but value will be assigned later
+  city: string="Hyderabad"
+
+}
+
+
+Open app.component.html
+
+<div> Hello! Welcome to Angular learning</div> 
+<!-- static data -->
+<!-- This will get displayed on MyApplication -->
+<p>{{title}}</p>
+<p>{{a}}</p>
+<div>{{city}}</div>
+<!-- data came from property -->
+<app-home></app-home>
+
+
+Output on MyApplication:
+Hello! Welcome to Angular learning
+myApplication
+
+20
+
+Hyderabad
+home works!
+
+{{}}- This is string interpolation- It is a data binding technique where we can bind data from typescript to html or template or control to dom
+
+
+*************************Data binding technique no 2------Property binding ***************************************
+
+Open app.component.ts file
+
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'myApplication';
+  //declare property. Below syntax
+  //propertyName: data type=value;
+
+  a=20;
+  b:number=90;
+  c!:number //means c is just declared but value will be assigned later
+  city: string="Hyderabad"
+  //{{propertyName}}
+  //[attribute]="propertyName"
+  myName="Shreya"
+
+}
+
+
+Open app.component.html
+
+<div> Hello! Welcome to Angular learning</div> 
+<!-- static data -->
+<!-- This will get displayed on MyApplication -->
+<p>{{title}}</p>
+<p>{{a}}</p>
+<div>{{city}}</div>
+{{city}}
+
+<!-- data came from property -->
+
+<input type="text" value="Tambe">
+<input type="text" [value]="myName">  //property binding
+<!-- property binding -->
+<app-home></app-home>
+
+
+Output on myApplication:
+
+Hello! Welcome to Angular learning
+
+myApplication
+
+
+20
+
+
+Hyderabad
+
+Hyderabad
+Tambe
+
+Shreya
+
+home works!
+
+//Property binding is used for input box mostly
+
+//can we using string interpolation for input box?- Yes but generally no because some fields like disable maky break
+
+<div> Hello! Welcome to Angular learning</div> 
+<br>
+<!-- static data -->
+<!-- This will get displayed on MyApplication -->
+<p>{{title}}</p>
+<br>
+<p>{{a}}</p>
+<br>
+<div>{{city}}</div>
+<br>
+{{city}}
+<!-- data came from property -->
+<br>
+<input type="text" value="Tambe">
+<br>
+<input type="text" [value]="myName">  
+<!-- property binding -->
+<br>
+<input type="text" value="{{myName}}">  //string interpolation
+<app-home></app-home>
+
+
+Output-
+Hello! Welcome to Angular learning
+
+myApplication
+
+
+20
+
+
+Hyderabad
+
+Hyderabad
+Tambe
+
+Shreya
+
+Shreya
+ //string interpolation
+home works!
+
+
+
+with value, string interpolation works, if we use disable is false
+Eg-
+app.component.html
+
+<div> Hello! Welcome to Angular learning</div> 
+<br>
+<!-- static data -->
+<!-- This will get displayed on MyApplication -->
+<p>{{title}}</p>
+<br>
+<p>{{a}}</p>
+<br>
+<div>{{city}}</div>
+<br>
+{{city}}
+<!-- data came from property -->
+<br>
+<input type="text" value="Tambe">
+<br>
+<input type="text" [value]="myName">  
+<!-- property binding -->
+<br>
+<input type="text" value="{{myName}}">  //string interpolation
+<br>
+<input type="text" [disabled]="isDisable">   //input box will get enabled
+<br>
+<!-- gives blank box -->
+<input type="text" disabled="{{isDisable}}"> //input box will not get enabled in string interpolation
+<app-home></app-home>
+
+
+app.component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'myApplication';
+  //declare property. Below syntax
+  //propertyName: data type=value;
+
+  a=20;
+  b:number=90;
+  c!:number //means c is just declared but value will be assigned later
+  city: string="Hyderabad"
+  //{{propertyName}}
+  //[attribute]="propertyName"
+  myName="Shreya"
+  isDisable=false
+ 
+  
+
+}
+
+
+Output: 
+Hello! Welcome to Angular learning
+
+myApplication
+
+
+20
+
+
+Hyderabad
+
+Hyderabad
+Tambe
+
+Shreya
+
+Shreya       //string interpolation
+               //input box will get enabled
+                 //input box will not get enabled in string interpolation
+home works!
+
+
+
+
+
+
+
+Is string interpolation only for string data type? No- Any data type
+What is property binding? Data binding technique specially made for input tags, symbol is []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**************************************Event data binding*****************************************************
+On user action, value should be set or displayed, we use event data binding technique. Example- button
+
+app.component.html
+
+<div> Hello! Welcome to Angular learning</div> 
+<br>
+<!-- static data -->
+<!-- This will get displayed on MyApplication -->
+<p>{{title}}</p>
+<br>
+<p>{{a}}</p>
+<br>
+<div>{{city}}</div>
+<br>
+{{city}}
+<!-- data came from property -->
+<br>
+<input type="text" value="Tambe">
+<br>
+<input type="text" [value]="myName">  
+<!-- property binding -->
+<br>
+<input type="text" value="{{myName}}">  //string interpolation
+<br>
+<input type="text" [disabled]="isDisable">   //input box will get enabled
+<br>
+<!-- gives blank box -->
+<input type="text" disabled="{{isDisable}}"> //input box will not get enabled in string interpolation
+<br>
+<button (click)="press()">Submit</button>
+
+<div>{{fruit}}</div> 
+<!-- initially div tag mango will not be visible in output -->
+<!-- When you click on submit in UI, then only mango will be visible on UI -->
+<app-home></app-home>
+
+
+app.component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'myApplication';
+  //declare property. Below syntax
+  //propertyName: data type=value;
+
+  a=20;
+  b:number=90;
+  c!:number ;//means c is just declared but value will be assigned later
+  city: string="Hyderabad";
+  //{{propertyName}}
+  //[attribute]="propertyName"
+  myName="Shreya";
+  isDisable=false;
+  fruit!:string;
+ 
+  
+  constructor(){}
+
+  press()
+  {
+   this.fruit="Mango"  //this keyword is used when we reuse previously defined variable to assign value to it in function
+  }
+
+
+}
+
+
+Output:
+
+Hello! Welcome to Angular learning
+
+myApplication
+
+
+20
+
+
+Hyderabad
+
+Hyderabad
+Tambe
+
+Shreya
+
+Shreya
+ //string interpolation
+ //input box will get enabled
+ //input box will not get enabled in string interpolation
+Submit
+Mango
+home works!
+
+
+################ There are 2 types of data binding
+1) One way data binding        2) Two way data binding
+
+1) One way data binding has 3 subtypes
+a)-String interpolation>> Symbol: {{}} >> syntax: {{propertyName}}
+b)-Property binding >> Symbol: [] >> syntax: [attribute]="propertyName
+c)-Event binding >> Symbol () >> on event will bind data to the property
+
+2) Two- way data binding >> Symbol:  [()] >> Syntax: [(ngModel)]="propertyName"
