@@ -1,0 +1,63 @@
+
+# PS E:\oct2023\octBatch\Angular> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 
+#  PS E:\oct2023\octBatch\Angular> ng new myApplication //This command is used to create new project with project name as myApplication
+#  Node.js version v19.8.1 detected. 
+#  Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/releases/. 
+#  ? Would you like to add Angular routing? Yes 
+#  ? Which stylesheet format would you like to use? CSS 
+#  CREATE myApplication/angular.json (2736 bytes) - This file is backbone of our application
+#  CREATE myApplication/package.json (1045 bytes) 
+#  CREATE myApplication/README.md (1067 bytes) 
+#  CREATE myApplication/tsconfig.json (901 bytes) 
+#  CREATE myApplication/.editorconfig (274 bytes) 
+#  CREATE myApplication/.gitignore (548 bytes) 
+#  CREATE myApplication/tsconfig.app.json (263 bytes) 
+#  CREATE myApplication/tsconfig.spec.json (273 bytes) 
+#  CREATE myApplication/.vscode/extensions.json (130 bytes) 
+#  CREATE myApplication/.vscode/launch.json (470 bytes) 
+#  CREATE myApplication/.vscode/tasks.json (938 bytes) 
+#  CREATE myApplication/src/main.ts (214 bytes) 
+#  CREATE myApplication/src/favicon.ico (948 bytes) 
+#  CREATE myApplication/src/index.html (299 bytes) 
+#  CREATE myApplication/src/styles.css (80 bytes) 
+#  CREATE myApplication/src/app/app-routing.module.ts (245 bytes) 
+#  CREATE myApplication/src/app/app.module.ts (393 bytes) 
+#  CREATE myApplication/src/app/app.component.html (23115 bytes) 
+#  CREATE myApplication/src/app/app.component.spec.ts (1012 bytes) 
+#  CREATE myApplication/src/app/app.component.ts (217 bytes) 
+#  CREATE myApplication/src/app/app.component.css (0 bytes) 
+#  CREATE myApplication/src/assets/.gitkeep (0 bytes) 
+#  ✔ Packages installed successfully. 
+#      Directory is already under version control. Skipping initialization of git.
+
+
+#      ****If workflow fails error comes then check whether node_modules folder is created or not. If not created or created but showing error then delete and create again using
+#      npm i
+# else close project and create new project if above solution doesn't work
+
+
+
+#      PS E:\oct2023\octBatch\Angular\myApplication> ng s -o
+# //to run the application
+
+
+# PS E:\oct2023\octBatch\Angular\myApplication> ng s -o 
+# Node.js version v19.8.1 detected. 
+# Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/releases/. 
+# ✔ Browser application bundle generation complete. 
+ 
+# Initial Chunk Files   | Names         |  Raw Size 
+# vendor.js             | vendor        |   2.35 MB |  
+# polyfills.js          | polyfills     | 333.17 kB |  
+# styles.css, styles.js | styles        | 230.46 kB |  
+# main.js               | main          |  48.75 kB |  
+# runtime.js            | runtime       |   6.52 kB |  
+ 
+#                       | Initial Total |   2.95 MB 
+ 
+# Build at: 2023-12-22T15:00:04.486Z - Hash: 770a85305e4496bc - Time: 10601ms 
+ 
+# ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ ** 
+ 
+ 
+# √ Compiled successfully
