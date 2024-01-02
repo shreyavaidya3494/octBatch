@@ -644,3 +644,130 @@ b)-Property binding >> Symbol: [] >> syntax: [attribute]="propertyName
 c)-Event binding >> Symbol () >> on event will bind data to the property
 
 2) Two- way data binding >> Symbol:  [()] >> Syntax: [(ngModel)]="propertyName"
+
+
+
+
+
+
+
+
+
+
+
+
+################################################ 28 Dec #######################################################################
+
+
+******************************** Two way data binding *************************************************************************
+
+app.component.html
+
+<!-- Two way data binding -->
+<br>
+<input type="text" [(ngModel)]="FavFruit"> Enter your favourite fruit
+<br>
+{{FavFruit}}
+<app-home></app-home>
+
+
+app.component.ts
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'myApplication';
+  //declare property. Below syntax
+  //propertyName: data type=value;
+
+  a=20;
+  b:number=90;
+  c!:number ;//means c is just declared but value will be assigned later
+  city: string="Hyderabad";
+  //{{propertyName}}
+  //[attribute]="propertyName"
+  myName="Shreya";
+  isDisable=false;
+  fruit!:string;
+  FavFruit="Apple"; /////////////////////Only this line added
+  
+  constructor(){}
+
+  press()
+  {
+   this.fruit="Mango"  //this keyword is used when we reuse previously defined variable to assign value to it in function
+  }
+
+
+}
+
+
+
+app.module.ts
+
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';    /////////////////////Automatically added
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule ////////////////////////////Only this line added
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+
+
+
+Output
+
+
+Apple 
+ Enter your favourite fruit
+Apple
+home works!
+
+
+if i edit enter your fav fruit of html, ts down text will also get updated, so 2 way data binding i.e ts to html and html to ts
+
+Property gets updated and also needs to be stored in  backend, so 2 way data binding
+
+
+
+Data Binding in Angular 8
+Data binding is the core concept of Angular 8 and used to define the communication between a component and the DOM. It is a technique to link your data to your view layer. In simple words, you can say that data binding is a communication between your typescript code of your component and your template which user sees. It makes easy to define interactive applications without worrying about pushing and pulling data.
+
+Data binding can be either one-way data binding or two-way data binding.
+
+
+One-way databinding
+One way databinding is a simple one way communication where HTML template is changed when we make changes in TypeScript code.
+
+
+Two-way Data Binding
+We have seen that in one-way data binding any change in the template (view) were not be reflected in the component TypeScript code. To resolve this problem, Angular provides two-way data binding. The two-way binding has a feature to update data from component to view and vice-versa.
+
+In two way data binding, property binding and event binding are combined together.
+
+Syntax:
+
+[(ngModel)] = "[property of your component]"  
+
+
+Business logic is written in ts file

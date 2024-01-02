@@ -19,7 +19,7 @@ export class AppComponent {
   myName="Shreya";
   isDisable=false;
   fruit!:string;
- 
+  FavFruit="Apple";
   
   constructor(){}
 

@@ -13,7 +13,9 @@
 <br>
 <input type="text" value="Tambe">
 <br>
-<input type="text" [value]="myName">  
+<input type="text" [value]="myName"> 
+<br>
+{{myName}} 
 <!-- property binding -->
 <br>
 <input type="text" value="{{myName}}">  //string interpolation
@@ -28,4 +30,11 @@
 <div>{{fruit}}</div> 
 <!-- initially div tag mango will not be visible in output -->
 <!-- When you click on submit in UI, then only mango will be visible on UI -->
+
+
+<!-- Two way data binding -->
+<br>
+<input type="text" [(ngModel)]="FavFruit"> Enter your favourite fruit
+<br>
+{{FavFruit}}
 <app-home></app-home>
