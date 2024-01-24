@@ -1,19 +1,25 @@
 to install latest version of angular : npm i -g @angular/cli
-to install angular cli bersionwise: npm i -g @angular/cli@16
+to install angular cli version wise: npm i -g @angular/cli@16
 to check installed or not : ng v
  
 create project : ng new projectName
+Here, we write ng new myApplication
 
-failure: delete node_modules folder and regenerate it by : npm i or npm install or 
+If failure in oroject myApplication creation: delete node_modules folder and regenerate it by : npm i or npm install or 
 if node_module not present in structure then create new project
 
-to run project, always open terminal on project folder
+to run project/application, always open terminal on project folder
 : ng serve or ng s or  ng serve --open or ng s -o
 -o means application will get opened on default browser
 
 
-to resolve pwershell unauthorized issue:
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 
+to resolve powershell unauthorized issue:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser  ...after doing this..Get-ExecutionPolicy as mentioned below:-
+
+PS E:\oct2023\octBatch\Angular> cd ..
+PS E:\oct2023\octBatch> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+PS E:\oct2023\octBatch> Get-ExecutionPolicy
+RemoteSigned
 
 What is the use of README file: In this file, we do not write programs or code. We can write notes/ messages for team members or ourselves.
 
@@ -771,3 +777,56 @@ Syntax:
 
 
 Business logic is written in ts file
+
+
+
+########################################################### 31 Dec ########################################################
+app-routing.module.ts, we write routing code
+
+app-routing.module.ts
+
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+
+const routes: Routes = [
+  {path : "", component: HomeComponent}       /////////////////////////added this. If path is empty then default component is assigned as home component
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+
+
+
+app.component.html
+remove <app-home></app-home>
+write <router-outlet></router-outlet>
+UI redirection not possible if u do not write router-outlet
+
+Generally don't write anything other than <router-outlet></router-outlet> in app.component.html
+so create new component named data binding
+PS E:\oct2023\octBatch\Angular\myApplication> ng g c databinding
+Node.js version v19.8.1 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/releases/.
+CREATE src/app/databinding/databinding.component.html (26 bytes)
+CREATE src/app/databinding/databinding.component.spec.ts (594 bytes)
+CREATE src/app/databinding/databinding.component.ts (222 bytes)
+CREATE src/app/databinding/databinding.component.css (0 bytes)
+UPDATE src/app/app.module.ts (632 bytes)
+
+
+
+The Router-Outlet is a directive that's available from the router library where the Router inserts the component that gets matched based on the current browser's URL. You can add multiple outlets in your Angular application which enables you to implement advanced routing scenarios.
+
+
+home.component.html
+
+<p>home works!</p>
+<button>data binding</button> ///added this
+
+Cut code of app.component.html except router line and paste it in databinding.component.html
+
