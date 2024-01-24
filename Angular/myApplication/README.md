@@ -62,14 +62,14 @@ Angular is component based architecture.
 1 component is made up of 4 files-app.component.css,  app.component.html,   app.component.spec.ts  , app.component.ts
 
 
-main.ts is entry point for angular JS execution tehn goes to app module- 6 files then goes to index.html
-In index.html, app-root is used as tag which is a seklector is app.component.ts, then it loads app.component.html which we can see in UI
+main.ts is entry point for angular JS application then goes to import app module- 6 files then goes to index.html
+In index.html, app-root is used as tag which is a selector is app.component.ts, then it loads app.component.html which we can see in UI
 
 
 assets folder contains public data like wallpaper, icon etc. This we want to show to public, so we keep such data in asset
 
 
-style.css - Project background, screen backgroynd, color, header, footer. This is written in style.css
+style.css - Project background, screen background, color, header, footer. This is written in style.css
 
 Angular is single page application because at the end only index.html is there on UI. Body gets over written as Components gets over written. Screen changes but application does not bet refreshed.
 
