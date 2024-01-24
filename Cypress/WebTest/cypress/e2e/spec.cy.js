@@ -45,6 +45,17 @@ describe('template spec3', () => {
 
 
 
+describe('template spec5', () => {
+  it('pass8', () => {
+    cy.visit('http://127.0.0.1:5500/Cypress/Website/index.html')
+  })
+
+
+})
+
+
+
+
 
 
 
