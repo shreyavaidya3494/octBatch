@@ -1,0 +1,30 @@
+<div>Welcome to 25 Dec angular app.component.html</div>
+<p>{{title}}</p>
+<p>{{a}}</p>
+<p>{{city}}</p>
+{{country}} <br>
+<input type="text" value="Mirza"> 
+<!-- above value Mirza came directly without using property binding --><br>
+<!-- below values will appear on DOM through property binding -->
+<input type="text" [value]="myName"> <br>
+<input type="text" [value]="mySurname">
+<br>
+<!-- below value will be displayed using string interpolation -->
+<input type="text" value="{{mySon}}">
+<br>
+<!-- generally we do not use string interpolation in case of input box because it fails in case of disable-->
+<input type="text" [disabled]="isDisable">
+<br>
+<input type="text" disabled="{{isDisable}}">
+<br><br>
+<!-- difference will be visible when isdisablee=false (disable false means enable, which fails in string interpolation)-->
+<input type="text" [disabled]="isDisablee"><br>
+<input type="text" disabled="{{isDisablee}}"> <br>
+
+<button (click)="submit()">Submit</button>
+<div>{{fruit}}</div>
+<!-- In DOM, this div and value of fruit will not be visible initially as compiler is not going to the function. -->
+<!-- Compiler will not go to function unless we evoke them to do so. -->
+<!-- When we click on submit button of DOM, then only Mango would be visible on DOM -->
+
+<app-home></app-home>
