@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-databinding',
+  templateUrl: './databinding.component.html',
+  styleUrls: ['./databinding.component.css']
 })
-export class AppComponent {
+export class DatabindingComponent {
   title = 'twentyFiveDec';
   a=5;
   city:string="Hyderabad";
@@ -26,4 +26,5 @@ export class AppComponent {
   {
    this.fruit="Mango";
   }
+
 }
