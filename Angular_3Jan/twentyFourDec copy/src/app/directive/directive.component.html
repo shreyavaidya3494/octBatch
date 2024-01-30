@@ -54,7 +54,26 @@ triple= when u have to deal with value and datatype -->
 </div>
 
 
-<div style="color : aqua; font-size : 30px; ">I like Hyderabad</div>
-
-<div [ngStyle]="{backgroundColor: getColor()}">I like Pune</div>
 <br><br><br>
+<!-- Attribute directive -->
+<!-- Style directive -->
+
+<div style="color:aqua; font-size:30px "> I like Hyderabad</div>
+<!-- Above way is good for static font color data -->
+
+<div [ngStyle]="{backgroundColor: getColor()}">I like Mumbai</div>
+<!-- If the backgroundcolor data is coming from backend, it will be dynamic. So, we have it pass it in function and bckg color will get updated as per bckend -->
+<br><br><br><br>
+<div [ngStyle]="{backgroundColor: getBackColour()}">I like Delhi</div>
+<!-- If the backgroundcolor data is coming from backend, it will be dynamic. So, we have it pass it in function and bckg color will get updated as per bckend -->
+<br><br><br>
+<div class="dContainer">I like India</div>
+<br><br>
+<div [class.dCont]="nation=='Pakistan'"> I live in Lahore</div>
+<br><br>
+
+<!-- Real time use -->
+<!-- Class Directive -->
+<div [class.JouContA]="journey=='Admin'"
+[class.JouContM]="journey=='Mentor'"
+[class.JouContS]="journey=='Student'">This is Chanakya Uni</div>
