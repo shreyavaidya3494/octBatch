@@ -1,0 +1,54 @@
+<p>directive works!</p>
+
+<div class="div-container" *ngIf="showDiv"></div>
+<!-- if it is true when 100*100 block will be visible, if false then block will not be visible -->
+<br>
+<button (click)="toggle()">Toggle</button>
+
+
+<!-- for loop for List -->
+<!-- If you have a big list, then will you write <li></li> repeatedly? No -->
+<ul>
+    <li>Bhelpuri</li>
+    <li>Panipuri </li>
+    <li>Sevpuri</li>
+    <li>Dahipuri</li>
+    <li>Pav-Bhaji</li>
+    <li>Vada-Pav</li>
+    <li>Idli sambar</li>
+    <li>Masala Dosa</li>
+    <li>Plain Dosa</li>
+    <li>Poori Bhaji</li>
+    <li>Noodles</li>
+    <li>Momos</li>
+    <li>Manchurian</li>
+    <li>Veg Main course</li>
+    <li>Non veg main course</li>
+</ul>
+
+<br>
+<br>
+<!-- Can I do string iterpolation? -->
+<ul><li>{{listItem}}</li></ul>
+
+<!-- But we want bullet for every item in output DOM -->
+<!-- below is forof loop -->
+<ul>
+    <li *ngFor="let elements of listItem">{{elements}} </li>
+</ul>
+<br>
+<br>
+<p *ngIf="color=='Pink'">I like Pink</p>
+<p *ngIf="daughter=='Raha'"> Raha is daughter of Ranbir</p>
+<!-- double= when u only have to do with value
+triple= when u have to deal with value and datatype -->
+
+<!-- ngSwitch using property binding -->
+<div [ngSwitch]="son">
+    <p *ngSwitchCase="'Jeh'">{{son}} is the son of Saif</p>
+    <p *ngSwitchCase="'Irahim'">{{son}} is the son of Amrita</p>
+    <p *ngSwitchCase="'Taimur'">{{son}} is the son of Kareena</p>
+    <p *ngSwitchCase="'Agastya'">{{son}} is the son of Shweta</p>
+    <p *ngSwitchDefault> I don't like bollywood son</p>
+
+</div>
