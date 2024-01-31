@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Website</title>
+    <style>
+        body{
+            
+            height:100vh;
+            
+        }
+        input{
+            padding:20px;
+            font-size: 20px;
+        }
+        #sub_btn{
+            padding:20px 40px;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div style="padding-top:200px;height:40vh;display: flex;flex-direction: column;border:1px solid black">
+        <h1 id="heading">This is My Project</h1>
+        
+        <input type="text" name="username" placeholder="username"/>
+        <input class="inp_2" type="text" name="password" placeholder="password"/>
+        <button id="sub_btn" >Submit</button>
+        </div>
+    <p id="para"></p>
+</body>
+<script>
+  window.addEventListener('load',()=>{
+        let button = document.getElementById('sub_btn')
+        button.addEventListener('click',function(){
+            let para = document.getElementById('para')
+            para.innerText="the button has been clicked"
+        })
+  })
+    
+</script>
+</html>
