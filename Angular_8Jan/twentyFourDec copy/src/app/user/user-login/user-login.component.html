@@ -1,0 +1,23 @@
+<!-- <p>user-login works!</p> -->
+<div class="form-container">
+    <h2>Login form</h2>
+    <form #loginForm="ngForm">
+        
+        <label> UserName</label>
+        <br>
+        <input type="text" #userName="ngModel" ngModel name="uName" required>
+        <!-- required is a key word which tells that this input box needs to be filled mandatorily -->
+        <div *ngIf="userName?.errors?.['required']  && userName?.touched" class="error-msg">Username is required</div>
+        <!-- Above div tag is to display error message -->
+        <br>
+        <label> Password </label>
+        <br>
+        <input type="text" #pass="ngModel" ngModel name="password" required>
+        <div *ngIf="pass?.errors?.['required'] && pass?.touched" class="error-msg">Password is required</div>
+        <br>
+        <br>
+        <button (click)="login(loginForm.value)" [disabled]="!loginForm.valid">Submit</button>
+        <!-- This loginForm is copy paste from #loginForm of form tag -->
+        <br>
+    </form>
+</div>
