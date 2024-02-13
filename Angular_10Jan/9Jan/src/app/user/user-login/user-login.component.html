@@ -1,0 +1,41 @@
+<!-- <p>user-login works!</p> -->
+<div class="form-container">
+    <h2>Login form</h2>
+    <form #loginForm="ngForm">
+        
+        <label> UserName</label>
+        <br>
+        <input type="text" #userName="ngModel" ngModel name="uName" required pattern="^[a-z A-Z]*$" minlength="2" maxlength="15">
+        <!-- required is a key word which tells that this input box needs to be filled mandatorily -->
+        <!-- ^ symbol denotes start of pattern, $ symbol denotes end of pattern, * symbol denotes partial match -->
+        <div *ngIf="userName?.errors?.['required']  && userName?.touched" class="error-msg">Username is required</div>
+        <!-- Above div tag is to display error message -->
+        <div *ngIf="userName?.errors?.['pattern'] && !userName?.errors?.['minlength']"  class="error-msg "> Username should only contain aplhabets</div>
+        <div *ngIf="userName?.errors?.['minlength']" class="error-msg "> Username should contain minimum 2 characters</div>
+        <br>
+        <label>Surname</label>
+        <br>
+        <input type="text" #surname="ngModel" ngModel name="surname" [(ngModel)]="name">
+        <br>
+        <label> Password </label>
+        <br>
+        <input [type]="isShowPass ? 'text':'password'" #pass="ngModel" ngModel name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$">
+        <!-- 8 means min length and 12 means max length -->
+        <i class="bi bi-eye-fill eye-icon" (click)="ToShowPassword()" *ngIf="isShowPass"></i>
+        <i class="bi bi-eye-slash-fill eye-icon2" (click)="ToShowPassword()" *ngIf="!isShowPass" ></i>
+        <!-- Classes bi, bi-eye-fill were already present, now added eye-icon class -->
+        <div *ngIf="pass?.errors?.['required'] && pass?.touched" class="error-msg">Password is required</div>
+        <div *ngIf="pass?.errors?.['pattern'] " class="error-msg">Password is invalid</div>
+        <br>
+        <br>
+        <button (click)="login(loginForm.value)" [disabled]="!loginForm.valid">Submit</button>
+        <!-- This loginForm is copy paste from #loginForm of form tag -->
+        <br>
+    </form>
+</div>
+
+
+<!-- <div class="container">
+</div> -->
+
+<!-- <i class="bi bi-eye-fill"></i> -->
