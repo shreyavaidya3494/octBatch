@@ -1,0 +1,41 @@
+<!-- <p>sign-up works!</p> -->
+
+<div class="form-container">
+    <form [formGroup]="signUpForm">
+        <!-- any name can be given in orange but formGroup is mandatory for reactive forms -->
+        
+        <mat-form-field class="form-fields">
+           <mat-label> Full Name </mat-label>
+           <input type="text" matInput formControlName="fullName">
+        </mat-form-field>
+<br>
+        <mat-form-field class="form-fields">
+            <mat-label> Mob No </mat-label>
+            <input type="text" matInput formControlName="mob">
+         </mat-form-field>
+<br>
+          <mat-label> Gender </mat-label>
+           <mat-radio-group formControlName="gender">
+             <mat-radio-button> Male </mat-radio-button>
+             <mat-radio-button> Female </mat-radio-button>
+           </mat-radio-group>     
+<br>
+         <mat-form-field class="form-fields">
+            <mat-label> Pan card </mat-label>
+            <input type="text" matInput formControlName="pan">
+         </mat-form-field>
+<br>
+         <mat-form-field class="form-fields">
+            <mat-label> Password </mat-label>
+            <input type="text" matInput formControlName="password">
+         </mat-form-field>
+<br>
+         <mat-form-field class="form-fields">
+            <mat-label> Confirm Password </mat-label>
+            <input type="text" matInput formControlName="confirmPass">
+         </mat-form-field>
+<br>
+       <button mat-raised-button color="accent" class="btn"> Submit </button>
+
+    </form>
+</div>
