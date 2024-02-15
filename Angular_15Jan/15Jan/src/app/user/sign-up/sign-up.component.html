@@ -1,0 +1,50 @@
+<!-- <p>sign-up works!</p> -->
+
+<div class="form-container">
+    <form [formGroup]="signUpForm">
+        <!-- any name can be given in orange but formGroup is mandatory for reactive forms -->
+        
+        <mat-form-field class="form-fields">
+           <mat-label> Full Name </mat-label>
+           <input type="text" matInput formControlName="fullName">
+        <mat-hint  *ngIf="!signUpForm.get('fullName')?.touched"> Please enter your name here </mat-hint>
+        <!-- Above statement states that if signUpForm doesn't get touched, then Pls enter your name here will come in DOM -->
+        <mat-error *ngIf="signUpForm.get('fullName')?.errors?.['required'] && signUpForm.get('fullName')?.touched"> Full name is required </mat-error>
+      </mat-form-field>
+<br>
+        <mat-form-field class="form-fields">
+            <mat-label> Mob No </mat-label>
+            <input type="text" matInput formControlName="mob">
+            <mat-hint *ngIf="!signUpForm.get('mob')?.touched"> Please enter your mobile number</mat-hint>
+            <mat-error *ngIf="signUpForm.get('mob')?.errors?.['maxlength'] && signUpForm.get('mob')?.touched"> Mob no should not be more than 10 dig</mat-error>
+            <!-- Here, maxlength in all lower case -->
+            <mat-error *ngIf="signUpForm.get('mob')?.errors?.['pattern'] && signUpForm.get('mob')?.touched && !signUpForm.get('mob')?.errors?.['maxlength']"> Invalid pattern </mat-error>
+            <!-- Above statement means display maxlength error 1st, if present, if not present and pattern is invalid, then only display invalid pattern error -->
+         </mat-form-field>
+         <br>
+<br>
+          <mat-label> Gender </mat-label>
+           <mat-radio-group formControlName="gender">
+             <mat-radio-button> Male </mat-radio-button>
+             <mat-radio-button> Female </mat-radio-button>
+           </mat-radio-group>     
+<br>
+         <mat-form-field class="form-fields">
+            <mat-label> Pan card </mat-label>
+            <input type="text" matInput formControlName="pan">
+         </mat-form-field>
+<br>
+         <mat-form-field class="form-fields">
+            <mat-label> Password </mat-label>
+            <input type="text" matInput formControlName="password">
+         </mat-form-field>
+<br>
+         <mat-form-field class="form-fields">
+            <mat-label> Confirm Password </mat-label>
+            <input type="text" matInput formControlName="confirmPass">
+         </mat-form-field>
+<br>
+       <button mat-raised-button color="accent" class="btn"> Submit </button>
+
+    </form>
+</div>
